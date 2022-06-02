@@ -33,6 +33,17 @@ app.post("/api/count", async (req, res) => {
   });
 });
 
+// 测试
+app.get("/api/message", async (req, res) => {
+  const result = '测试代码'
+  res.send({
+    code: 0,
+    data: result,
+  });
+});
+
+
+
 // 获取计数
 app.get("/api/count", async (req, res) => {
   const result = await Counter.count();
